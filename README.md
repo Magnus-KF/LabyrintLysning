@@ -1,2 +1,2 @@
 # LabyrintLysning
- finn den ein veg ut? + no andre greier
+ finn den ein veg ut?
