@@ -1,14 +1,8 @@
-package labyrint; /**
- * Created by frydtzuig on 4/5/17.
- */
-
-// TODO rydde opp i koden, og så levere. kanskje se meir på settminimalutskrift
-
+package labyrint; 
 import java.util.*;
 public abstract class Rute {
     protected int xKord;
     protected int yKord;
-    //Referanse til labyrinten her...
     protected Labyrint lab;
     //Naboruter
     protected Rute sor;
@@ -23,12 +17,7 @@ public abstract class Rute {
         this.yKord = kolonne;
         this.lab = lab;
 
-
-
-
     }
-
-
     //Oppretter link til naboruter her, ved å hente rader og kolloner og setter ein peker til
     // ruten som enten er over, under eller til siden.
     // pekeren opprettes for sjøvle ruten som skal vere ved siden blir opprettet, er det ein problem?
@@ -132,9 +121,6 @@ public abstract class Rute {
 
 
     }
-
-
-
     // Dersom gaa, har aapning som slutt legg den til?
     // finnuteifra i labyrint tar kol rad og kaller på finnutvei
     // rute rute = arg[rad][kol]

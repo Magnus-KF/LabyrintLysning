@@ -13,8 +13,7 @@ class Oblig5 {
         if (args.length > 0) {
             filnavn = args[0];
         } else {
-            System.out.println("FEIL! Riktig bruk: "
-                               +"java labyrint.Oblig5 <labyrintfil>");
+            System.out.println("feil fil");
             return;
         }
         File fil = new File(filnavn);
@@ -22,10 +21,10 @@ class Oblig5 {
         try {
             l = Labyrint.lesFraFil(fil);
         } catch (FileNotFoundException e) {
-            System.out.printf("FEIL: Kunne ikke lese fra '%s'\n", filnavn);
+            System.out.printf("Kan ikkje lese '%s'\n", filnavn);
             System.exit(1);
         }
-            //TODO hmmm? ahh. fjern alle utskrifter frå mitt program...
+        
         l.settMinimalUtskrift();
         System.out.println(l.toString());
 
@@ -47,5 +46,6 @@ class Oblig5 {
             }
             System.out.println();
         }
+        inn.close(); 
     }
 }

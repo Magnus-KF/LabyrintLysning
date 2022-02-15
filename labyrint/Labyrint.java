@@ -1,28 +1,7 @@
-package labyrint; /**
- * Created by frydtzuig on 4/5/17.
- */
-// Lister frå oblig3, syntaxetingen gjenkjenner den ikkje, men det funker
+package labyrint; 
 import lister.*;
-
-
-
-
-
-
 import java.io.*;
 import java.util.Scanner;
-
-/*
-TOC
-
-lesFraFil
-
-
-
-
-*/
-
-
 
 public class Labyrint {
     //2D array
@@ -32,15 +11,12 @@ public class Labyrint {
     protected boolean blokkere;
 
 
-
 // Lagrar rader, kolonner og arrayen
     private Labyrint (int rad, int kolonne) {
         this.rader = rad;
         this.kolonner = kolonne;
         //Dette burde lage 2d arren...
         this.arr = new Rute[rad][kolonne];
-
-
 
     }
     // Stabel til tostring metoden
@@ -75,8 +51,6 @@ public class Labyrint {
 
     public static Labyrint lesFraFil (File fil) throws FileNotFoundException{
         //ganske dust innlesing av tall...
-        // Bruker to scannera, så den nye begynner på nytt
-        // derfor begynner arrayen på 0 0 og ikkje 1 1
         Scanner scanner = new Scanner(fil).useDelimiter("\n");
 
         // Eigen scanner for talla, som bruker mellomrom som delimiter
@@ -88,13 +62,8 @@ public class Labyrint {
             tall[i++] = idk.nextInt();
         }
         idk.close();
-
+       
         Labyrint lab = new Labyrint(tall[1], tall[0]);
-
-
-
-        //Telle igjennom?
-        //  er rader og kolonner satt på riktig plass?
 
         //Linje = kolonnenummer
         int linje = 0;
@@ -134,6 +103,7 @@ public class Labyrint {
             }
             linje++;
         }
+        scanner.close();
 
 
         // Kvar rute, får riktige naboar, har denne til slutt, når alle rutene er satt på plass
@@ -142,10 +112,7 @@ public class Labyrint {
             enkel.settKordinat(); }
 
         }
-        return lab;
-
-
-
+        return lab;       
     }
 
     // Kanskje ikkje den mest elgante maoten ao gjere dette pao

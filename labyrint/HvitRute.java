@@ -1,8 +1,4 @@
 package labyrint;
-
-/**
- * Created by frydtzuig on 4/5/17.
- */
 public class HvitRute extends Rute {
 
 
@@ -11,7 +7,6 @@ public class HvitRute extends Rute {
         super(rad,kolonne,lab);
     }
 
-    // Lagre denne som ein global variabel?
     public char tilTegn() {
         return ' ';
     }
